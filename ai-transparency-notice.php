@@ -3,7 +3,7 @@
 Plugin Name: AI Transparency Notice
 Plugin URI: https://github.com/ValentinGratz/ai-transparency-notice
 Description: Ajoute une mention de transparence IA dans les contenus WordPress.
-Version: 2.0.0
+Version: 2.1.0
 Author: Valentin
 License: GPL-2.0
 */
