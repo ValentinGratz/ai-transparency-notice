@@ -29,11 +29,11 @@ function aitn_meta_box_html($post) {
 }
 
 function aitn_save_meta($post_id) {
-    if (!isset($_POST['aitn_nonce'])) {
-        return;
-    }
+    $nonce = isset($_POST['aitn_nonce'])
+        ? sanitize_text_field(wp_unslash($_POST['aitn_nonce']))
+        : '';
 
-    if (!wp_verify_nonce(wp_unslash($_POST['aitn_nonce']), 'aitn_save_meta')) {
+    if (!$nonce || !wp_verify_nonce($nonce, 'aitn_save_meta')) {
         return;
     }
 
