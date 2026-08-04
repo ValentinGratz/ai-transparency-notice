@@ -4,6 +4,12 @@ Plugin WordPress pour indiquer si le contenu a été rédigé ou assisté par un
 
 > "La transparence est la première étape pour construire une relation de confiance entre les créateurs de contenu et leurs lecteurs."
 
+![Taille du dépôt](https://img.shields.io/github/repo-size/ValentinGratz/ai-transparency-notice)
+![Dernier commit](https://img.shields.io/github/last-commit/ValentinGratz/ai-transparency-notice)
+![Issues](https://img.shields.io/github/issues/ValentinGratz/ai-transparency-notice)
+![Licence](https://img.shields.io/github/license/ValentinGratz/ai-transparency-notice)
+![Stars](https://img.shields.io/github/stars/ValentinGratz/ai-transparency-notice)
+
 ## 📌 À propos du projet
 
 Ce plugin a été créé rapidement à la suite de l'entrée en vigueur des nouvelles obligations européennes concernant la transparence des contenus générés ou assistés par intelligence artificielle.
