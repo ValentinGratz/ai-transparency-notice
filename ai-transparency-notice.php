@@ -1,49 +1,35 @@
 <?php
 /*
-Plugin Name: AI Transparency Notice
+Plugin Name: Valentin Transparency Notice for AI Content
 Plugin URI: https://github.com/ValentinGratz/ai-transparency-notice
-Description: Ajoute une mention de transparence IA dans les contenus WordPress.
+Description: Helps website owners disclose when content has been created or assisted by artificial intelligence.
 Version: 2.1.0
-Author: Valentin
-License: GPL-2.0
+Author: Valentin Grätz
+License: GPL-2.0-or-later
+Text Domain: valentin-transparency-notice-ai-content
 */
 
 if (!defined('ABSPATH')) {
     exit;
 }
 
-define('AITN_VERSION', '2.0.0');
-define('AITN_PATH', plugin_dir_path(__FILE__));
-define('AITN_URL', plugin_dir_url(__FILE__));
+define('VTNAI_VERSION', '2.1.0');
+define('VTNAI_PATH', plugin_dir_path(__FILE__));
+define('VTNAI_URL', plugin_dir_url(__FILE__));
 
+require_once VTNAI_PATH . 'includes/admin-settings.php';
+require_once VTNAI_PATH . 'includes/meta-box.php';
+require_once VTNAI_PATH . 'includes/frontend.php';
+require_once VTNAI_PATH . 'includes/shortcode.php';
 
-require_once AITN_PATH . 'includes/admin-settings.php';
-require_once AITN_PATH . 'includes/meta-box.php';
-require_once AITN_PATH . 'includes/frontend.php';
-require_once AITN_PATH . 'includes/shortcode.php';
+register_activation_hook(__FILE__, 'vtnai_activate');
 
-
-
-register_activation_hook(__FILE__, 'aitn_activate');
-
-
-function aitn_activate() {
-
-    if (!get_option('aitn_settings')) {
-
-        add_option('aitn_settings', [
-
-            'enabled' => 'yes',
-
+function vtnai_activate() {
+    if (!get_option('vtnai_settings')) {
+        add_option('vtnai_settings', [
+            'enabled'  => 'yes',
             'position' => 'after',
-
-            'text' =>
-            '🤖 <strong>Transparence :</strong><br>
-            Cet article a été réalisé avec l’aide d’outils d’intelligence artificielle.
-            Le contenu a été vérifié, corrigé et édité avant publication.'
-
+            'text'     => '🤖 <strong>Transparency:</strong><br>\n            This article was created with the help of artificial intelligence tools.\n            The content was reviewed, corrected, and edited before publication.'
         ]);
-
     }
-
 }
