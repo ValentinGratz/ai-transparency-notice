@@ -1,68 +1,47 @@
-# ai-transparency-notice
+# Valentin Transparency Notice for AI Content
 
-Plugin WordPress pour indiquer si le contenu a été rédigé ou assisté par une intelligence artificielle.
+WordPress plugin for indicating whether content was written or assisted by artificial intelligence.
 
-> "La transparence est la première étape pour construire une relation de confiance entre les créateurs de contenu et leurs lecteurs."
+> "Transparency is the first step toward building trust between content creators and their readers."
 
-![Taille du dépôt](https://img.shields.io/github/repo-size/ValentinGratz/ai-transparency-notice)
-![Dernier commit](https://img.shields.io/github/last-commit/ValentinGratz/ai-transparency-notice)
+![Repository size](https://img.shields.io/github/repo-size/ValentinGratz/ai-transparency-notice)
+![Last commit](https://img.shields.io/github/last-commit/ValentinGratz/ai-transparency-notice)
 ![Issues](https://img.shields.io/github/issues/ValentinGratz/ai-transparency-notice)
-![Licence](https://img.shields.io/github/license/ValentinGratz/ai-transparency-notice)
+![License](https://img.shields.io/github/license/ValentinGratz/ai-transparency-notice)
 ![Stars](https://img.shields.io/github/stars/ValentinGratz/ai-transparency-notice)
 
-## 📌 À propos du projet
+## About the project
 
-Ce plugin a été créé rapidement à la suite de l'entrée en vigueur des nouvelles obligations européennes concernant la transparence des contenus générés ou assistés par intelligence artificielle.
+This plugin was created to provide a simple way for WordPress sites to disclose content that was generated or assisted by artificial intelligence.
 
-L'objectif était de proposer une solution simple et légère pour les sites WordPress souhaitant afficher une mention de transparence IA sans devoir modifier manuellement chaque article existant.
+The goal is to offer a lightweight transparency tool without requiring website owners to manually edit every existing article.
 
-Ce projet est une première version (MVP) développée rapidement afin de répondre à ce besoin. Des améliorations pourront être ajoutées progressivement selon les retours de la communauté.
+The plugin is an editorial transparency tool and does not constitute legal advice. Applicable obligations may vary depending on jurisdiction and future official guidance.
 
-⚠️ Note : ce plugin est un outil de transparence éditoriale et ne constitue pas un avis juridique. Les obligations peuvent évoluer selon les interprétations et les futures recommandations officielles.
+## Installation
 
----
+Download the plugin ZIP and install it from the WordPress admin area under **Plugins → Add New → Upload Plugin**.
 
-## 🚀 Installation
+The plugin can then be configured from **Settings → AI Content Transparency**.
 
-L'activation se fait tout simplement.
+## Configuration
 
-Vous devez télécharger le fichier ZIP du plugin, puis l'activer depuis WordPress :
+After activation, choose the default notice position and customize the transparency text from the settings page.
 
-<img width="947" height="170" alt="Activation extension" src="https://github.com/user-attachments/assets/24f80da5-f549-45d9-8114-b934cf7694d6" />
+When editing a post, use the **AI Content Transparency** meta box to select:
 
----
+- No AI
+- AI assistance
+- Significant AI use
 
-## ⚙️ Configuration
+The notice is then displayed automatically according to the configured position.
 
-Une fois l'extension activée, allez dans :
+## Shortcode
 
-**Réglages → AI Transparency Notice**
+You can also display the notice manually with:
 
-comme ceci :
+`[valentin_ai_transparency]`
 
-<img width="436" height="354" alt="Réglages plugin" src="https://github.com/user-attachments/assets/15d3d238-0d05-493d-b1da-afea4cf0a4bb" />
+## License
 
-Puis sélectionnez l'affichage automatique sur les articles et, si vous le souhaitez, sur les pages.
-
-Vous pouvez également personnaliser le texte affiché :
-
-<img width="772" height="487" alt="Personnalisation texte" src="https://github.com/user-attachments/assets/c15ea5ef-d173-43b0-9542-51d1b20408d0" />
-
----
-
-## ✅ Résultat
-
-Une fois le plugin activé et configuré, la mention apparaîtra automatiquement sur vos contenus mais seulement si vous l'actriver pour chacun des articles comme ceci :
-<img width="291" height="138" alt="image" src="https://github.com/user-attachments/assets/411a344e-47d3-4720-9b36-6f17b31ace11" />
-
-<img width="351" height="268" alt="image" src="https://github.com/user-attachments/assets/aa727379-9d60-4de4-bcd6-cc7171c453ee" />
-
-
-<img width="820" height="235" alt="Résultat final" src="https://github.com/user-attachments/assets/e2fca6d0-5a0f-45ab-aba0-ac14daf65905" />
-
-Si la rédaction par IA est importante il vous affichera ceci : 
-<img width="718" height="170" alt="image" src="https://github.com/user-attachments/assets/f8831113-b3f0-498f-857a-ed191d5094cf" />
-
-Et s'il s'agit juste d'une aide, d'une assistance la mention sera : 
-<img width="734" height="131" alt="image" src="https://github.com/user-attachments/assets/510a440e-6ec4-4157-87d5-32c3b22983da" />
-
+This project is licensed under the GPLv2 or later.
