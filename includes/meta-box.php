@@ -4,23 +4,23 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-function aitn_add_meta_box() {
+function vtnai_add_meta_box() {
     add_meta_box(
-        'aitn_box',
-        'AI Transparency',
-        'aitn_meta_box_html',
+        'vtnai_box',
+        'AI Content Transparency',
+        'vtnai_meta_box_html',
         'post',
         'side'
     );
 }
-add_action('add_meta_boxes', 'aitn_add_meta_box');
+add_action('add_meta_boxes', 'vtnai_add_meta_box');
 
-function aitn_meta_box_html($post) {
-    $value = get_post_meta($post->ID, '_aitn_level', true);
+function vtnai_meta_box_html($post) {
+    $value = get_post_meta($post->ID, '_vtnai_level', true);
 
-    wp_nonce_field('aitn_save_meta', 'aitn_nonce');
+    wp_nonce_field('vtnai_save_meta', 'vtnai_nonce');
     ?>
-    <select name="aitn_level" style="width:100%">
+    <select name="vtnai_level" style="width:100%">
         <option value="none" <?php selected($value, 'none'); ?>>No AI</option>
         <option value="assist" <?php selected($value, 'assist'); ?>>AI assistance</option>
         <option value="important" <?php selected($value, 'important'); ?>>Significant AI use</option>
@@ -28,22 +28,31 @@ function aitn_meta_box_html($post) {
     <?php
 }
 
-function aitn_save_meta($post_id) {
-    $nonce = isset($_POST['aitn_nonce'])
-        ? sanitize_text_field(wp_unslash($_POST['aitn_nonce']))
+function vtnai_save_meta($post_id) {
+    $nonce = isset($_POST['vtnai_nonce'])
+        ? sanitize_text_field(wp_unslash($_POST['vtnai_nonce']))
         : '';
 
-    if (!$nonce || !wp_verify_nonce($nonce, 'aitn_save_meta')) {
+    if (!$nonce || !wp_verify_nonce($nonce, 'vtnai_save_meta')) {
         return;
     }
 
-    if (isset($_POST['aitn_level'])) {
-        update_post_meta(
-            $post_id,
-            '_aitn_level',
-            sanitize_text_field(wp_unslash($_POST['aitn_level']))
-        );
+    if (!current_user_can('edit_post', $post_id)) {
+        return;
+    }
+
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+        return;
+    }
+
+    if (isset($_POST['vtnai_level'])) {
+        $level = sanitize_text_field(wp_unslash($_POST['vtnai_level']));
+        $allowed_levels = ['none', 'assist', 'important'];
+
+        if (in_array($level, $allowed_levels, true)) {
+            update_post_meta($post_id, '_vtnai_level', $level);
+        }
     }
 }
 
-add_action('save_post', 'aitn_save_meta');
+add_action('save_post', 'vtnai_save_meta');
