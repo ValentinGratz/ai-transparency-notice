@@ -4,22 +4,11 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-
-
-function aitn_shortcode(){
-
-
-return aitn_notice('assist');
-
-
+function vtnai_shortcode() {
+    return vtnai_notice('assist');
 }
 
-
-
 add_shortcode(
-
-'ai_transparency',
-
-'aitn_shortcode'
-
+    'valentin_ai_transparency',
+    'vtnai_shortcode'
 );
