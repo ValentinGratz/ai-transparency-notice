@@ -7,6 +7,7 @@ Version: 2.1.3
 Requires at least: 6.0
 Requires PHP: 7.2
 Author: Valentin Grätz
+Author URI: https://github.com/ValentinGratz
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: ai-transparency-notice
