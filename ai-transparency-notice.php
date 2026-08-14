@@ -3,7 +3,7 @@
 Plugin Name: Valentin Transparency Notice for AI Content
 Plugin URI: https://github.com/ValentinGratz/ai-transparency-notice
 Description: Helps website owners disclose when content has been created or assisted by artificial intelligence.
-Version: 2.1.0
+Version: 2.1.2
 Author: Valentin Grätz
 License: GPL-2.0-or-later
 Text Domain: ai-transparency-notice
@@ -13,7 +13,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('VTNAI_VERSION', '2.1.0');
+define('VTNAI_VERSION', '2.1.2');
 define('VTNAI_PATH', plugin_dir_path(__FILE__));
 define('VTNAI_URL', plugin_dir_url(__FILE__));
 
