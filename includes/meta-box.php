@@ -21,7 +21,7 @@ function vtnai_meta_box_html($post) {
     wp_nonce_field('vtnai_save_meta', 'vtnai_nonce');
     ?>
     <label for="vtnai-level"><?php echo esc_html__('AI assistance level', 'ai-transparency-notice'); ?></label>
-    <select id="vtnai-level" class="vtnai-level" name="vtnai_level">
+    <select id="vtnai-level" name="vtnai_level">
         <option value="none" <?php selected($value, 'none'); ?>><?php echo esc_html__('No AI', 'ai-transparency-notice'); ?></option>
         <option value="assist" <?php selected($value, 'assist'); ?>><?php echo esc_html__('AI assistance', 'ai-transparency-notice'); ?></option>
         <option value="important" <?php selected($value, 'important'); ?>><?php echo esc_html__('Significant AI use', 'ai-transparency-notice'); ?></option>
