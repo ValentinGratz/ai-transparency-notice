@@ -2,6 +2,7 @@
 Contributors: valentindu62
 Tags: ai, artificial intelligence, transparency, content, disclosure
 Requires at least: 6.0
+Requires PHP: 7.2
 Tested up to: 7.0
 Stable tag: 2.1.3
 License: GPLv2 or later
@@ -46,6 +47,7 @@ Yes. Use the `[valentin_ai_transparency]` shortcode in your content.
 * Improved settings input validation and admin accessibility.
 * Improved post metadata save safeguards.
 * Improved frontend output escaping and conditional stylesheet loading.
+* Added cleanup of stored post metadata when the plugin is uninstalled.
 
 = 2.1.2 =
 * Fixed the plugin text domain to match the `ai-transparency-notice` slug.
