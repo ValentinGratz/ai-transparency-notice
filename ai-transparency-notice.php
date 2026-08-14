@@ -6,7 +6,7 @@ Description: Helps website owners disclose when content has been created or assi
 Version: 2.1.0
 Author: Valentin Grätz
 License: GPL-2.0-or-later
-Text Domain: valentin-transparency-notice-ai-content
+Text Domain: ai-transparency-notice
 */
 
 if (!defined('ABSPATH')) {
