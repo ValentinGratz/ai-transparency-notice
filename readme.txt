@@ -3,7 +3,7 @@ Contributors: valentindu62
 Tags: ai, artificial intelligence, transparency, content, disclosure
 Requires at least: 6.0
 Tested up to: 7.0
-Stable tag: 2.1.0
+Stable tag: 2.1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,7 +19,7 @@ The plugin is designed as an editorial transparency tool. It does not provide le
 
 == Installation ==
 
-1. Upload the plugin files to the `/wp-content/plugins/valentin-transparency-notice-ai-content` directory.
+1. Upload the plugin files to the `/wp-content/plugins/ai-transparency-notice` directory.
 2. Activate the plugin through the WordPress admin area.
 3. Configure the settings from Settings > AI Content Transparency.
 4. When editing a post, use the AI Content Transparency box to indicate the level of AI assistance.
@@ -40,7 +40,12 @@ Yes. Use the `[valentin_ai_transparency]` shortcode in your content.
 
 == Changelog ==
 
-= 2.1.0 =
+= 2.1.2 =
+* Fixed the plugin text domain to match the `ai-transparency-notice` slug.
+* Updated plugin version metadata and stable tag.
+* Corrected the installation directory in the documentation to match the plugin slug.
+
+= 2.1.1 =
 * Renamed the plugin for a more distinctive WordPress.org identity.
 * Replaced generic global prefixes with a unique plugin prefix.
 * Improved output escaping and input validation.
