@@ -3,9 +3,12 @@
 Plugin Name: Valentin Transparency Notice for AI Content
 Plugin URI: https://github.com/ValentinGratz/ai-transparency-notice
 Description: Helps website owners disclose when content has been created or assisted by artificial intelligence.
-Version: 2.1.2
+Version: 2.1.3
+Requires at least: 6.0
+Requires PHP: 7.2
 Author: Valentin Grätz
 License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: ai-transparency-notice
 */
 
@@ -13,7 +16,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('VTNAI_VERSION', '2.1.2');
+define('VTNAI_VERSION', '2.1.3');
 define('VTNAI_PATH', plugin_dir_path(__FILE__));
 define('VTNAI_URL', plugin_dir_url(__FILE__));
 
@@ -29,7 +32,7 @@ function vtnai_activate() {
         add_option('vtnai_settings', [
             'enabled'  => 'yes',
             'position' => 'after',
-            'text'     => '🤖 <strong>Transparency:</strong><br>\n            This article was created with the help of artificial intelligence tools.\n            The content was reviewed, corrected, and edited before publication.'
+            'text'     => __('🤖 <strong>Transparency:</strong><br>This article was created with the help of artificial intelligence tools.<br>The content was reviewed, corrected, and edited before publication.', 'ai-transparency-notice')
         ]);
     }
 }
