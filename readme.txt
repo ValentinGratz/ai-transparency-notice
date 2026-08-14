@@ -3,7 +3,7 @@ Contributors: valentindu62
 Tags: ai, artificial intelligence, transparency, content, disclosure
 Requires at least: 6.0
 Tested up to: 7.0
-Stable tag: 2.1.2
+Stable tag: 2.1.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,13 @@ Yes. The notice text can be customized from the plugin settings page.
 Yes. Use the `[valentin_ai_transparency]` shortcode in your content.
 
 == Changelog ==
+
+= 2.1.3 =
+* Added explicit WordPress and PHP compatibility headers.
+* Improved internationalization of plugin interface and frontend strings.
+* Improved settings input validation and admin accessibility.
+* Improved post metadata save safeguards.
+* Improved frontend output escaping and conditional stylesheet loading.
 
 = 2.1.2 =
 * Fixed the plugin text domain to match the `ai-transparency-notice` slug.
